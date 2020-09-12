@@ -45,7 +45,8 @@
     </div>
 
     <div id="subscribe" class="subscribe-overlay">
-        <a class="subscribe-close" href="#"></a>
+        <a class="subscribe-close-overlay" href="#"></a>
+        <a class="subscribe-close-button" href="#"></a>
         <div class="subscribe-overlay-content">
             {{#if @site.logo}}
                 <img class="subscribe-overlay-logo" src="{{@site.logo}}" alt="{{@site.title}}" />
@@ -76,9 +77,8 @@
 
     {{!-- jQuery, required for fitvids --}}
     <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous">
+        src="{{asset "js/jquery-3.4.1.min.js"}}"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=">
     </script>
     {{!-- Fitvids (for responsive video embeds), infinite scroll, floating header, and gallery card support --}}
     <script src="{{asset "built/casper.js"}}"></script>
